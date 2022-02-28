@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
+import "./helpers/i18n";
+import { lazy, Suspense } from "react";
 
 function App() {
-  return (
-    <div>
+  const Header = lazy(() => import('./components/header/header.component'));
 
-    </div>
-  );
+  return <Suspense fallback={<div>Loading...</div>}>
+      <Header />
+  </Suspense>
 }
 
 export default App;
