@@ -1,20 +1,20 @@
 import "./App.css";
 import "./helpers/i18n";
 import { lazy, Suspense } from "react";
+import { BrowserRouter , HashRouter} from "react-router-dom";
+import Header from "./components/header/header.component";
+import Main from "./components/main/main.component";
+import Footer from "./components/footer/footer.component";
 
 function App() {
-  const Header = lazy(() => import("./components/header/header.component"));
-  const Main = lazy(() => import("./components/main/main.component"));
-  const Footer = lazy(() => import("./components/footer/footer.component"));
-
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <HashRouter>
       <Header />
       <main>
         <Main />
       </main>
       <Footer />
-    </Suspense>
+    </HashRouter>
   );
 }
 

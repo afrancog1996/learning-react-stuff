@@ -11,14 +11,12 @@ function Main() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Welcome />}></Route>
           <Route path="/spotify-app" element={<Spotify />}></Route>
           <Route path="/supabase-app" element={<Supabase />}></Route>
           <Route path="/instagram-clone" element={<Instagram />}></Route>
         </Routes>
-      </BrowserRouter>
     </Suspense>
   );
 }
