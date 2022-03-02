@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
-import { useTranslation } from "react-i18next";
+
 export interface Data {
   name: string;
   artist: string;
