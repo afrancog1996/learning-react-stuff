@@ -13,6 +13,8 @@ const translation = {
     "empty_option": "Todos",
     "input_placeholder_s": "Selecciona el filtro y escribe para buscar..",
     "select_placeholder_s": "vacio",
+    "welcome": "Bienvenido",
+    "git": "GITHUB",
   }
 }
 
