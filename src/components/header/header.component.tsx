@@ -17,12 +17,12 @@ import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const { t } = useTranslation();
-  const [auth, setAuth] = React.useState(true);
+  // const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAuth(event.target.checked);
-  };
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setAuth(event.target.checked);
+  // };
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -48,7 +48,7 @@ function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <FormGroup>
+      {/* <FormGroup>
         <FormControlLabel
           control={
             <Switch
@@ -59,7 +59,7 @@ function Header() {
           }
           label={auth ? "Logout" : "Login"}
         />
-      </FormGroup>
+      </FormGroup> */}
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -76,7 +76,7 @@ function Header() {
             {/* <NavLink to="/instagram-clone">{t("instagram_title")}</NavLink> */}
             <NavLink to="/in-work">{t("instagram_title")}</NavLink>
           </Button>
-          {auth && (
+          {/* {auth && ( */}
             <div>
               <IconButton
                 size="large"
@@ -119,7 +119,7 @@ function Header() {
                 </MenuItem>
               </Menu>
             </div>
-          )}
+          {/* )} */}
         </Toolbar>
       </AppBar>
     </Box>
