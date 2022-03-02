@@ -12,7 +12,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import i18next from "i18next";
 import * as React from "react";
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 
@@ -45,7 +44,7 @@ function Header() {
     },
   };
 
-  useEffect(() => {}, []);
+  React.useEffect(() => {}, []);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -70,10 +69,12 @@ function Header() {
             <NavLink to="/spotify-app">{t("spotify_title")}</NavLink>
           </Button>
           <Button variant="outlined" size="small">
-            <NavLink to="/supabase-app">{t("supabase_title")}</NavLink>
+            {/* <NavLink to="/supabase-app">{t("supabase_title")}</NavLink> */}
+            <NavLink to="/in-work">{t("supabase_title")}</NavLink>
           </Button>
           <Button variant="outlined" size="small">
-            <NavLink to="/instagram-clone">{t("instagram_title")}</NavLink>
+            {/* <NavLink to="/instagram-clone">{t("instagram_title")}</NavLink> */}
+            <NavLink to="/in-work">{t("instagram_title")}</NavLink>
           </Button>
           {auth && (
             <div>
