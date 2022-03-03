@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Avatar from "./avatar";
 import { supabase } from "./functions";
 
 export default function Account({ session }) {
@@ -109,6 +108,9 @@ export default function Account({ session }) {
   }
 
   async function insertRecord(title, content, reminder) {
+    console.log(title)
+    console.log(content)
+    console.log(recordID)
     if (recordID !== null && recordID !== "") {
       updateReminder();
     } else {
@@ -226,14 +228,14 @@ export default function Account({ session }) {
     <div className="form-widget">
       <h1>{t("title1")}</h1>
 
-      <Avatar
+      {/* <Avatar
         url={avatar_url}
         size={150}
         onUpload={(url) => {
           setAvatarUrl(url);
           updateProfile(username, website, url);
         }}
-      />
+      /> */}
 
       <div>
         <label htmlFor="email">{t("field1")}</label>
