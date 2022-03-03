@@ -63,14 +63,13 @@ function Header() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/">{t("global_title")}</Link>
+            <Link to="/welcome">{t("global_title")}</Link>
           </Typography>
           <Button variant="outlined" size="small">
             <NavLink to="/spotify-app">{t("spotify_title")}</NavLink>
           </Button>
           <Button variant="outlined" size="small">
-            {/* <NavLink to="/supabase-app">{t("supabase_title")}</NavLink> */}
-            <NavLink to="/in-work">{t("supabase_title")}</NavLink>
+            <NavLink to="/supabase-app">{t("supabase_title")}</NavLink>
           </Button>
           <Button variant="outlined" size="small">
             {/* <NavLink to="/instagram-clone">{t("instagram_title")}</NavLink> */}
